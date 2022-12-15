@@ -7,11 +7,19 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/"
+    publicPath: "/",
   },
   mode: "development",
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@containers": path.resolve(__dirname, "src/containers/"),
+      "@pages": path.resolve(__dirname, "src/pages/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@icons": path.resolve(__dirname, "src/assets/Icons/"),
+      "@logos": path.resolve(__dirname, "src/assets/logos/")
+    }
   },
   module: {
     rules: [
@@ -34,6 +42,10 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(svg|png|jpg|gif|jpeg)$/,
+        type: "asset",
+      },
     ],
   },
   plugins: [
@@ -42,10 +54,10 @@ module.exports = {
       filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css"
-    })
+      filename: "[name].css",
+    }),
   ],
   devServer: {
     historyApiFallback: true,
-  }
+  },
 };

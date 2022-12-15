@@ -1,11 +1,13 @@
 import React from "react";
-import "../styles/login.scss";
+import "@styles/login.scss";
+
+import logo from "@logos/logo_yard_sale.svg"
 
 const Login = () => {
   return (
     <div className="login">
       <div className="login-container">
-        <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
         <form action="/" className="form">
           <label htmlFor="email" className="label">
             Email address
@@ -13,8 +15,8 @@ const Login = () => {
           <input
             type="text"
             id="email"
-            placeholder="myname@example.cm"
-            className="input input-email"
+            placeholder="myname@example.com"
+            className="input-email"
           />
           <label htmlFor="password" className="label">
             Password
@@ -23,7 +25,7 @@ const Login = () => {
             type="password"
             id="password"
             placeholder="*********"
-            className="input input-password"
+            className="input-password"
           />
           <input
             type="submit"

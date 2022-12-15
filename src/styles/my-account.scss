@@ -2,7 +2,7 @@
 
 .my-account {
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
 	display: grid;
 	place-items: center;
 }
@@ -43,8 +43,8 @@
 .secondary-button {
 	background-color: var(--white);
 	border-radius: 8px;
-	border: 1px solid var(--hospital-green);
-	color: var(--hospital-green);
+	border: 1px solid var(--light-purple);
+	color: var(--light-purple);
 	width: 100%;
 	cursor: pointer;
 	font-size: var(--md);

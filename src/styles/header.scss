@@ -7,11 +7,11 @@ nav {
   border-bottom: 1px solid var(--very-light-pink);
 }
 
-.menu {
+.menu-logo {
   display: none;
 }
 
-.logo {
+.nav-logo {
   width: 150px;
   padding-bottom: 4px;
 }
@@ -71,7 +71,7 @@ nav {
 }
 
 @media (max-width: 820px) {
-  .menu {
+  .menu-logo {
     display: block;
     width: 25px;
     height: 60px;
@@ -85,7 +85,7 @@ nav {
 }
 
 @media (min-width: 820px) {
-  .logo {
+  .nav-logo {
     margin-right: 24px;
   }
 }

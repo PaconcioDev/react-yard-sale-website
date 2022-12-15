@@ -1,12 +1,14 @@
 import React from "react";
-import OrderItem from "../components/OrderItem";
-import "../styles/my-order.scss";
+import OrderItem from "@components/OrderItem";
+import "@styles/my-order.scss";
+
+import arrow from "@icons/flechita.svg"
 
 const MyOrder = () => {
   return (
     <aside className="my-order">
       <div className="title-container">
-        <img src="./icons/flechita.svg" alt="arrow" />
+        <img src={arrow} alt="arrow" />
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">

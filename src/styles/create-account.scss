@@ -2,7 +2,7 @@
 
 .create-account {
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
 	display: grid;
 	place-items: center;
 }
@@ -50,7 +50,7 @@
 	margin-bottom: 22px;
 }
 .primary-button {
-	background-color: var(--hospital-green);
+	background-color: var(--light-purple);
 	border-radius: 8px;
 	border: none;
 	color: var(--white);

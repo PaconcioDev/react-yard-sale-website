@@ -1,12 +1,12 @@
 import React from "react";
-import "../styles/shopping-cart-item.scss";
+import "@styles/shopping-cart-item.scss";
 
 const ShoppingCartItem = () => {
   return (
     <div className="shopping-cart-item">
       <figure>
         <img
-          src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          src="https://cdn.shopify.com/s/files/1/1040/9804/products/sitting_4_1024x1024.jpg?v=1560498522"
           alt="Corgi Plush"
         />
       </figure>
