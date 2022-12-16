@@ -1,4 +1,7 @@
 
+*.svg
+*.png
+
 ### Node ###
 # Logs
 logs

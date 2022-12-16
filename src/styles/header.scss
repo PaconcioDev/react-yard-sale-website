@@ -45,19 +45,27 @@ nav {
   color: var(--light-purple);
 }
 
-.email {
+.navbar-email {
   color: var(--very-light-pink);
   font-size: var(--sm);
   margin-right: 12px;
+
+}
+
+.navbar-email:hover {
+  cursor: pointer;
+  user-select: none;
+  color: var(--light-purple)
 }
 
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 
 .navbar-shopping-cart div {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--light-purple);
   font-size: 12px;
@@ -68,6 +76,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 @media (max-width: 820px) {
@@ -79,7 +88,7 @@ nav {
   .navbar-left ul {
     display: none;
   }
-  .email {
+  .navbar-email {
     display: none;
   }
 }

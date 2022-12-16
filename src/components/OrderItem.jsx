@@ -1,20 +1,23 @@
 import React from "react";
+import { AppContext } from "@context/AppContext";
 import "@styles/order-item.scss";
 
-import closeIcon from "@icons/icon_close.png"
+import closeIcon from "@icons/icon_close.png";
 
-const OrderItem = () => {
+const OrderItem = ({ item }) => {
+  const { removeFromCart } = React.useContext(AppContext);
+  const handleRemove = item => {
+    removeFromCart(item)
+  }
+
   return (
     <div className="order-item">
       <figure>
-        <img
-          src="https://cdn.shopify.com/s/files/1/1040/9804/products/sitting_4_1024x1024.jpg?v=1560498522"
-          alt="corgi plush"
-        />
+        <img src={item.images[0]} alt={item.title} />
       </figure>
-      <p>Corgi Plush</p>
-      <p>$120,00</p>
-      <img src={closeIcon} alt="close" />
+      <p>{item.title}</p>
+      <p>${item.price}</p>
+      <img src={closeIcon} alt="close" onClick={() => handleRemove(item)}/>
     </div>
   );
 };

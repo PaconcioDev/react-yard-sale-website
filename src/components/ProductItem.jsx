@@ -1,21 +1,25 @@
 import React from "react";
 import "@styles/product-item.scss";
+import { AppContext } from "@context/AppContext";
 
-import addToCartIcon from "@icons/bt_add_to_cart.svg"
+import addToCartIcon from "@icons/bt_add_to_cart.svg";
 
-const ProductItem = () => {
+const ProductItem = ({ product }) => {
+  const { addToCart } = React.useContext(AppContext);
+
+  const handleClick = item => {
+    addToCart(item);
+  };
+
   return (
     <div className="product-item">
-      <img
-        src="https://cdn.shopify.com/s/files/1/1040/9804/products/sitting_4_1024x1024.jpg?v=1560498522"
-        alt=""
-      />
+      <img src={product.images[0]} alt={product.title} />
       <div className="product-info">
         <div>
-          <p>$120,00</p>
-          <p>Corgi Plush</p>
+          <p>${product.price}</p>
+          <p>{product.title}</p>
         </div>
-        <figure>
+        <figure onClick={() => handleClick(product)}>
           <img src={addToCartIcon} alt="+" />
         </figure>
       </div>
